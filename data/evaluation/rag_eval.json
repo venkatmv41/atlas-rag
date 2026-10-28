@@ -1,0 +1,63 @@
+
+[
+  {
+    "id": "T1",
+    "question": "Which team is responsible for receiving temperature-excursion notices?",
+    "expected_source": "temperature_excursion.txt",
+    "expected_evidence": "the designated quality team that receives all excursion notices"
+  },
+  {
+  "id": "T2",
+  "question": "Who owns the investigation after a temperature excursion?",
+  "expected_source": "temperature_excursion.txt",
+  "expected_evidence": "owns/leads the investigation"
+},
+  {
+    "id": "T3",
+    "question": "What is the notification deadline for a critical temperature excursion?",
+    "expected_source": "temperature_excursion.txt",
+    "expected_evidence": "within 1 hour (60 minutes)"
+  },
+  {
+    "id": "D1",
+    "question": "How soon must a deviation be logged after it is discovered?",
+    "expected_source": "deviation_management.txt",
+    "expected_evidence": "within 1 calendar day of discovery"
+  },
+  {
+    "id": "D2",
+    "question": "Which deviation classes require a CAPA?",
+    "expected_source": "deviation_management.txt",
+    "expected_evidence": "A CAPA is REQUIRED for every MAJOR and CRITICAL deviation"
+  },
+  {
+    "id": "D3",
+    "question": "Who closes a minor deviation?",
+    "expected_source": "deviation_management.txt",
+    "expected_evidence": "MINOR deviations are closed by the QA Reviewer"
+  },
+  {
+    "id": "C1",
+    "question": "Which roles must approve a document before it becomes effective?",
+    "expected_source": "document_control.txt",
+    "expected_evidence": "Author, Department Head, QA Reviewer and QA Head"
+  },
+  {
+    "id": "C2",
+    "question": "How many days after approval may a document become effective?",
+    "expected_source": "document_control.txt",
+    "expected_evidence": "at least 7 days and at most 30 days after the Approved Date"
+  },
+  {
+    "id": "C3",
+    "question": "What training must employees complete before a new document revision takes effect?",
+    "expected_source": "document_control.txt",
+    "expected_evidence": "100% completion) before the Effective Date"
+  },
+  {
+    "id": "C4",
+    "question": "How quickly must a superseded revision be removed from points of use?",
+    "expected_source": "document_control.txt",
+    "expected_evidence": "within 1 business day"
+  }
+]

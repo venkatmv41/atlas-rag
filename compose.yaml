@@ -1,0 +1,42 @@
+
+services:
+  atlas-cache-init:
+    image: atlas-rag-atlas
+    user: "0:0"
+    entrypoint:
+      - /bin/sh
+      - -c
+      - "mkdir -p /cache && chown -R 10001:10001 /cache"
+    volumes:
+      - atlas_hf_cache:/cache
+    restart: "no"
+
+  atlas:
+    image: atlas-rag-atlas
+    build: .
+    container_name: atlas-api
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - atlas_chroma:/app/chroma_db
+      - atlas_hf_cache:/home/atlas/.cache/huggingface
+    depends_on:
+      atlas-cache-init:
+        condition: service_completed_successfully
+    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
+
+volumes:
+  atlas_chroma:
+  atlas_hf_cache:

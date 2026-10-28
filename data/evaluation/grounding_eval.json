@@ -1,0 +1,60 @@
+
+[
+  {
+    "id": "G1",
+    "question": "Who owns a temperature-excursion investigation?",
+    "should_abstain": false,
+    "required_answer_terms": [
+      "QA Specialist",
+      "investigation"
+    ],
+    "expected_sources": [
+      "temperature_excursion.txt"
+    ],
+    "required_evidence_terms": [
+      "QA Specialist",
+      "leads the investigation"
+    ]
+  },
+  {
+    "id": "G2",
+    "question": "How long are excursion investigation reports retained?",
+    "should_abstain": false,
+    "required_answer_terms": [
+      "7",
+      "years"
+    ],
+    "expected_sources": [
+      "temperature_excursion.txt"
+    ],
+    "required_evidence_terms": [
+      "investigation reports",
+      "retained for 7 years"
+    ]
+  },
+  {
+    "id": "G3",
+    "question": "What is the company's CEO's name?",
+    "should_abstain": true,
+    "required_answer_terms": [],
+    "expected_sources": [],
+    "required_evidence_terms": []
+  },
+  {
+    "id": "G4",
+    "question": "Who receives excursion notices, and who leads the investigation?",
+    "should_abstain": false,
+    "required_answer_terms": [
+      "QA Temperature Review Team",
+      "QA Specialist"
+    ],
+    "expected_sources": [
+      "temperature_excursion.txt"
+    ],
+    "required_evidence_terms": [
+  "QA Temperature Review Team",
+  "Notify the QA Temperature Review Team by phone",
+  "A QA Specialist owns the investigation"
+]
+  }
+]
