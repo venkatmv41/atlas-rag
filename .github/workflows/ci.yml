@@ -31,3 +31,14 @@ jobs:
 
       - name: Run tests
         run: python -m pytest -v
+
+  docker-build:
+    name: Build Docker image
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build ATLAS Docker image
+        run: docker build -t atlas-rag:ci .
