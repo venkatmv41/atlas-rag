@@ -10,6 +10,14 @@ FastAPI, ChromaDB, Sentence Transformers, and Groq.
 > guidance. Do not use this project as a source of real-world compliance
 > or safety decisions without replacing and validating the documents.
 
+## Project status and intended use
+
+**ATLAS is an experimental learning project.** It was developed to practise and demonstrate real-world engineering concepts used in retrieval-augmented generation (RAG) systems, including document ingestion, semantic retrieval, source-grounded generation, evaluation, API development, containerization, and continuous integration.
+
+All sample SOPs and example domain content included in this repository are **fictitious and created for demonstration and testing purposes**. They do not represent a real organization, validated operating procedures, or authoritative regulatory, medical, pharmaceutical, or compliance guidance.
+
+This project is intended for learning, experimentation, and technical evaluation—not as a production-ready or decision-making system. Model outputs may be incomplete, inaccurate, or unsupported even when citations are provided. Validate results against trusted source material, and do not use this project for real operational, safety, regulatory, or compliance decisions without appropriate review, testing, and controls.
+
 ## Features
 
 -   **Document ingestion:** reads sample SOP text files, splits them
